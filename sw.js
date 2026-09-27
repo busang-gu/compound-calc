@@ -1,6 +1,6 @@
 /* 부상구 복리 계산기 — 서비스워커 (오프라인 캐시)
    수정 후 재배포 시 CACHE 버전을 올리면 사용자 기기에서 자동 갱신됩니다. */
-const CACHE = "busangu-compound-v1";
+const CACHE = "busangu-compound-v2";
 const ASSETS = ["./", "./index.html", "./data.js", "./manifest.json", "./icon-192.png", "./icon-512.png", "./icon-512-maskable.png"];
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
